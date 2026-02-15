@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Peperoni Massas</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+  <h1> Peperoni Massas 🍝</h1>
+  <p>Seu delivery de massas favorito </p>
+</header>
+
+<section class="menu">
+
+  <div class="item">
+    <h2>Lasanha</h2>
+    <p>R$ 25,00</p>
+    <button onclick="addCarrinho('Lasanha',25)">Adicionar</button>
+  </div>
+
+  <div class="item">
+    <h2>Macarrão ao molho branco</h2>
+    <p>R$ 20,00</p>
+    <button onclick="addCarrinho('Macarrão branco',20)">Adicionar</button>
+  </div>
+
+  <div class="item">
+    <h2>Spaghetti bolonhesa</h2>
+    <p>R$ 22,00</p>
+    <button onclick="addCarrinho('Spaghetti',22)">Adicionar</button>
+  </div>
+
+  <div class="item">
+    <h2>Ravioli de queijo</h2>
+    <p>R$ 24,00</p>
+    <button onclick="addCarrinho('Ravioli',24)">Adicionar</button>
+
+</section>
+
+<section class="carrinho">
+  <h2>🛒 Carrinho</h2>
+  <ul id="lista"></ul>
+  <h3 id="total">Total: R$ 0</h3>
+
+  <button class="whats" onclick="enviarWhats()">
+    Finalizar no WhatsApp
+  </button>
+</section>
+
+<footer>
+  Peperoni Massas © 2026
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
+
