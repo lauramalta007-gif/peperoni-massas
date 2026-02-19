@@ -1,21 +1,32 @@
 body {
+    body {
     margin: 0;
     font-family: Georgia, serif;
-    color: #7A3B2C;
-    background-color: #FFF8F4;
-    background-image: url("https://www.transparenttextures.com/patterns/paper.png");
+    background-color: #EEDFD2; /* bege artesanal mais quente */
 }
 
 header {
+    header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
-    padding: 40px 20px 20px 20px;
 }
+
+
+}
+
 
 .logo {
     width: 250px;
+    .logo {
+    width: 320px; /* antes estava pequena */
+}
+
 }
 
 h2 {
+  display: block;
     color: #C0553D;
     letter-spacing: 3px;
     font-weight: normal;
@@ -109,6 +120,7 @@ button:hover {
 }
 
 .whatsapp {
+
     background-color: #25D366;
     margin-top: 15px;
     width: 100%;
