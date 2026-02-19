@@ -1,69 +1,115 @@
-body{
-  background-image:url("./fundo.png");
-  background-repeat:repeat;
-  background-size:140px;
-  background-attachment: fixed;
-    font-family: Arial, sans-serif;
-  margin:0;
-  
+body {
+    margin: 0;
+    font-family: Georgia, serif;
+    color: #7A3B2C;
+    background-color: #FFF8F4;
+    background-image: url("https://www.transparenttextures.com/patterns/paper.png");
 }
 
-header{
-  background:#d6670c;
-  color:rgb(253, 252, 251);
-  text-align:center;
-  padding:20px;
+header {
+    text-align: center;
+    padding: 40px 20px 20px 20px;
 }
 
-.menu{
-  display:flex;
-  gap:20px;
-  justify-content:center;
-  flex-wrap:wrap;
-  padding:20px;
-  background: rgba(255,255,255,0.92);
-  border-radius: 20px;
+.logo {
+    width: 250px;
 }
 
-.item{
-  background:rgb(248, 190, 103);
-  padding:20px;
-  border-radius:12px;
-  color: white;
-  width:200px;
-  box-shadow:0 4px 10px rgba(245, 139, 2, 0.993);
-  text-align:center;
+h2 {
+    color: #C0553D;
+    letter-spacing: 3px;
+    font-weight: normal;
 }
 
-button{
-  background:#ffa703;
-  color:rgb(249, 252, 250);
-  border:none;
-  padding:10px;
-  border-radius:8px;
-  cursor:pointer;
+.produtos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 30px;
 }
 
-button:hover{
-  background:#fa8806;
+.card {
+    width: 320px;
+    background-color: #FFF8F4;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+    border: 1px solid #E8D8CC;
+    position: relative;
 }
 
-.carrinho{
-  background:white;
-  margin:20px;
-  padding:20px;
-  border-radius:12px;
-  
+.card h3 {
+    color: #7A3B2C;
+    margin-bottom: 10px;
 }
 
-.whats{
-  background:#25d366;
-  width:100%;
-  margin-top:10px;
+.card p {
+    font-size: 14px;
+    color: #6A4B3C;
 }
 
-footer{
-  text-align:center;
-  padding:20px;
-  color:#777;
+.preco {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #C0553D;
+}
+
+button {
+    margin-top: 15px;
+    background-color: #C0553D;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #A94430;
+}
+.carrinho {
+    background-color: #FFF8F4;
+    margin: 40px auto;
+    padding: 20px;
+    width: 320px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+}
+
+.carrinho h2 {
+    color: #C0553D;
+    text-align: center;
+}
+
+.carrinho ul {
+    list-style: none;
+    padding: 0;
+}
+
+.carrinho li {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.carrinho li button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.total {
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.whatsapp {
+    background-color: #25D366;
+    margin-top: 15px;
+    width: 100%;
 }

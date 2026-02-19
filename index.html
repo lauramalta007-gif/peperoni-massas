@@ -1,61 +1,50 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Peperoni Massas</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Chico & Afeto</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
 <header>
-  <h1> Peperoni Massas 🍝</h1>
-  <p>Seu delivery de massas favorito </p>
+    <img src="logo.jpg" class="logo">
+    <h2>Massas & Carinho</h2>
 </header>
 
-<section class="menu">
+<section class="produtos">
 
-  <div class="item">
-    <h2>Lasanha</h2>
-    <p>R$ 25,00</p>
-    <button onclick="addCarrinho('Lasanha',25)">Adicionar</button>
-  </div>
+    <div class="card">
+        <h3>Lasanha Bolonhesa</h3>
+        <p>Molho artesanal e muito queijo.</p>
+        <span class="preco" data-preco="28">R$ 28,00</span>
+        <button onclick="adicionar('Lasanha Bolonhesa', 28)">Adicionar</button>
+    </div>
 
-  <div class="item">
-    <h2>Macarrão ao molho branco</h2>
-    <p>R$ 20,00</p>
-    <button onclick="addCarrinho('Macarrão branco',20)">Adicionar</button>
-  </div>
+    <div class="card">
+        <h3>Lasanha Frango</h3>
+        <p>Frango temperado e molho branco.</p>
+        <span class="preco" data-preco="26">R$ 26,00</span>
+        <button onclick="adicionar('Lasanha Frango', 26)">Adicionar</button>
+    </div>
 
-  <div class="item">
-    <h2>Spaghetti bolonhesa</h2>
-    <p>R$ 22,00</p>
-    <button onclick="addCarrinho('Spaghetti',22)">Adicionar</button>
-  </div>
-
-  <div class="item">
-    <h2>Ravioli de queijo</h2>
-    <p>R$ 24,00</p>
-    <button onclick="addCarrinho('Ravioli',24)">Adicionar</button>
+    <div class="card">
+        <h3>Fettuccine Carbonara</h3>
+        <p>Clássico italiano caseiro.</p>
+        <span class="preco" data-preco="30">R$ 30,00</span>
+        <button onclick="adicionar('Fettuccine Carbonara', 30)">Adicionar</button>
+    </div>
 
 </section>
 
 <section class="carrinho">
-  <h2>🛒 Carrinho</h2>
-  <ul id="lista"></ul>
-  <h3 id="total">Total: R$ 0</h3>
-
-  <button class="whats" onclick="enviarWhats()">
-    Finalizar no WhatsApp
-  </button>
+    <h2>🛒 Seu Pedido</h2>
+    <ul id="lista"></ul>
+    <p class="total">Total: R$ <span id="total">0</span></p>
+    <button class="whatsapp" onclick="finalizar()">Finalizar no WhatsApp</button>
 </section>
 
-<footer>
-  Peperoni Massas © 2026
-</footer>
-
 <script src="script.js"></script>
+
 </body>
 </html>
-

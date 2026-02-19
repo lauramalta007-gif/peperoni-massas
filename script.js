@@ -1,36 +1,45 @@
 let carrinho = [];
 let total = 0;
 
-function addCarrinho(nome, preco){
-  carrinho.push({nome,preco});
-  total += preco;
-  atualizar();
+function adicionar(nome, preco) {
+    carrinho.push({ nome, preco });
+    total += preco;
+    atualizarCarrinho();
 }
 
-function atualizar(){
-  let lista = document.getElementById("lista");
-  lista.innerHTML = "";
-
-  carrinho.forEach(item=>{
-    let li = document.createElement("li");
-    li.textContent = item.nome + " - R$ " + item.preco;
-    lista.appendChild(li);
-  });
-
-  document.getElementById("total").textContent = 
-  "Total: R$ " + total;
+function remover(index) {
+    total -= carrinho[index].preco;
+    carrinho.splice(index, 1);
+    atualizarCarrinho();
 }
 
-function enviarWhats(){
-  let texto = "Pedido Massas:%0A";
+function atualizarCarrinho() {
+    const lista = document.getElementById("lista");
+    const totalElemento = document.getElementById("total");
 
-  carrinho.forEach(item=>{
-    texto += item.nome + " - R$" + item.preco + "%0A";
-  });
+    lista.innerHTML = "";
 
-  texto += "%0ATotal: R$" + total;
+    carrinho.forEach((item, index) => {
+        lista.innerHTML += `
+            <li>
+                ${item.nome} - R$ ${item.preco}
+                <button onclick="remover(${index})">❌</button>
+            </li>
+        `;
+    });
 
-  let numero = "5582999999999"; // coloque seu número
+    totalElemento.textContent = total;
+}
 
-  window.open(`https://wa.me/${numero}?text=${texto}`);
+function finalizar() {
+    let mensagem = "Olá, gostaria de pedir:%0A";
+
+    carrinho.forEach(item => {
+        mensagem += `- ${item.nome} (R$ ${item.preco})%0A`;
+    });
+
+    mensagem += `%0ATotal: R$ ${total}`;
+
+    const telefone = "55082993021475"; // COLOCA SEU NÚMERO AQUI
+    window.open(`https://wa.me/${telefone}?text=${mensagem}`);
 }
