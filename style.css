@@ -2,7 +2,9 @@ body {
     body {
     margin: 0;
     font-family: Georgia, serif;
-    background-color: #EEDFD2; /* bege artesanal mais quente */
+        body {
+    background-color: #E8E1D9;
+}
 }
 
 header {
