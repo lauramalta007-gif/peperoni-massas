@@ -20,9 +20,9 @@ header {
 
 
 .logo {
-    width: 250px;
-    .logo {
-    width: 320px; /* antes estava pequena */
+    width: 180px;
+    display: block;
+    margin: 20px auto;
 }
 
 }
