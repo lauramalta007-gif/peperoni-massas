@@ -1,0 +1,34 @@
+<h2>Painel Admin</h2>
+
+<input id="nome" placeholder="Nome do produto">
+<input id="descricao" placeholder="Descrição">
+<input id="preco" placeholder="Preço">
+<button onclick="salvar()">Salvar</button>
+
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+import { getFirestore, collection, addDoc }
+from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyCCXeARidvRar7bTafEk61FcgzTmYMjSX0",
+  authDomain: "chico-afeto.firebaseapp.com",
+  projectId: "chico-afeto",
+  storageBucket: "chico-afeto.firebasestorage.app",
+  messagingSenderId: "137443657974",
+  appId: "1:137443657974:web:2e6848b28ab86954b604d7",
+};
+
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+
+window.salvar = async function() {
+  await addDoc(collection(db, "produtos"), {
+    nome: document.getElementById("nome").value,
+    descricao: document.getElementById("descricao").value,
+    preco: document.getElementById("preco").value
+  });
+
+  alert("Produto adicionado!");
+}
+</script>

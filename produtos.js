@@ -2,6 +2,7 @@ let produtos = [
   {nome:"Lasanha Bolonhesa", preco:25},
   {nome:"Lasanha Frango", preco:23},
   {nome:"Macarrão", preco:20}
+  
 ];
 
 let carrinho = [];
